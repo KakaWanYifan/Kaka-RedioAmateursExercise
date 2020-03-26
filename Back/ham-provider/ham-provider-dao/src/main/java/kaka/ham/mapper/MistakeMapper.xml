@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kaka.ham.mapper.MistakeMapper">
+	<select id="getMistakeList" resultType="Mistake">
+		select * from mistake
+		where loginid = #{arg0} and category = #{arg1} and state = '1'
+	</select>
+	<insert id="setNewMistake">
+		insert into mistake
+		(loginid,category,topicid,inserted,state) values
+		(#{arg0},#{arg1},#{arg2},NOW(),'1')
+	</insert>
+	<select id="getCountByTopicid" resultType="Integer">
+		SELECT count(*) FROM
+		ham.mistake where loginid = #{arg0} and category = #{arg1} and topicid
+		= #{arg2} and state = '1'
+	</select>
+	<update id="setMistakeInvalid">
+		update mistake set updated = now(),state = '0' where
+		loginid = #{arg0} and category = #{arg1} and topicid = #{arg2}
+	</update>
+	<select id="getMisTakeListFive" resultType="Mistake">
+		SELECT * FROM mistake
+		where loginid = #{arg0} and DATE_SUB(CURDATE(),
+		INTERVAL 4 DAY) &lt;= inserted
+	</select>
+</mapper> 

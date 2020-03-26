@@ -1,0 +1,13 @@
+<view class="index">
+
+  <view class="index-hd">
+    <view class="page-head-title">{{categoryShow}}</view>
+    <view class="page-head-line"></view>
+    <view class="page-head-desc">近五天错题记录</view>
+  </view>
+  <view class="container">
+  <table tableThemes="{{themeArr}}" tableItems="{{itemArr}}"></table>
+  </view>
+
+
+</view>

@@ -1,0 +1,13 @@
+<view class="index">
+
+  <view class="index-hd">
+    <view class="page-head-title">{{categoryShow}}</view>
+    <view class="page-head-line"></view>
+    <view class="page-head-desc">近五次考试记录</view>
+  </view>
+  <view class="ff-container">
+  <ff-canvas id="line-dom" canvas-id="line" opts="{{opts}}"></ff-canvas>
+  </view>
+
+
+</view>

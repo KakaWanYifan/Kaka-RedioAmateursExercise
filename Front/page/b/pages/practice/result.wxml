@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="page-head">
+    <view class="page-head-title">答对{{result.score}}题</view>
+    <view class="page-head-line"></view>
+    <view class="page-head-desc" wx:if="{{result.score>=40}}">通过</view>
+    <view class="page-head-desc" wx:if="{{result.score<40}}">加油</view>
+    <button type='primary' wx:if="{{result.score>=40}}" bindtap='toHome'>追求卓越</button>
+    <button type='primary' wx:if="{{result.score<40}}" bindtap='toHome'>再接再厉</button>
+  </view>
+  <view class="page-body">
+    <view class="kind-list">
+      <block wx:for-items="{{result.mistakeList}}" wx:key="{{item.q}}">
+        <view class="kind-list-item">
+          <view class="navigator">题目：{{item.q}}</view>
+                    <view class="navigator" wx:if="{{item.pic}}">
+            <image style='width:100%;' src="../../../../img/bank/{{item.pic}}" mode="widthFix" />
+          </view>
+          <view class="navigator">正确：{{item.t}}</view>
+          <view class="navigator">错误：{{item.f}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view style='height:200rpx;  clear: both;'></view>
+</view>

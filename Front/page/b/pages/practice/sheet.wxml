@@ -1,0 +1,20 @@
+<view class='singleChoice' wx:for="{{topicList}}" wx:key="{{item.id}}">
+  <block wx:if="{{item.answer}}">
+    <view class='singleChoiceItemCorrect' id='{{item.id}}'>{{item.id}}</view>
+  </block>
+  <block wx:else>
+    <view class='singleChoiceItemBlank' id='{{item.id}}'>{{item.id}}</view>
+  </block>
+</view>
+
+<view style='height:200rpx;  clear: both;'></view>
+
+
+<view class='bottom'>
+  <view class='left'>
+    <button class='leftText' type='primary' bindtap='continueAnswer'>继续答题</button>
+  </view>
+  <view class='right'>
+   <button class='rightText' type='default' bindtap='assignment'>交卷</button>
+  </view>
+</view>

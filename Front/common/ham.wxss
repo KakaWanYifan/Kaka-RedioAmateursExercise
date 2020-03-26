@@ -1,0 +1,65 @@
+.view_hide {
+  display: none;
+}
+
+.view_show {
+  display: block;
+}
+
+.index-desc-view {
+  padding: 50rpx;
+  margin-bottom: 50rpx;
+  text-align: center;
+}
+
+.topic {
+  padding: 50rpx 50rpx 0rpx 50rpx;
+  font-size: 40rpx;
+}
+
+.topic-sm {
+  padding: 10rpx 50rpx 0rpx 50rpx;
+  font-size: 30rpx;
+}
+
+.topic-index {
+  padding: 10rpx 50rpx 0rpx;
+  text-align: center;
+}
+
+.topic-option {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 35rpx;
+}
+
+.topic-option-sm {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.titleAnswer {
+  display: inline-block;
+  width: 60rpx;
+  height: 58rpx;
+  color: #FF0000;
+  text-align: center;
+}
+
+.waitAnswer {
+  display: inline-block;
+  width: 60rpx;
+  height: 58rpx;
+  color: #999;
+  text-align: center;
+}
+
+.finishAnswer {
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #000;
+  text-align: center;
+}

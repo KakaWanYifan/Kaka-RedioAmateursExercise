@@ -1,0 +1,22 @@
+@import "../../../../common/lib/weui.wxss";
+@import "../../../../common/ham.wxss";
+
+.paper-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120rpx;
+    line-height: 120rpx;
+    padding:0 120rpx 0 80rpx;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    color: #000000;
+    text-align: center;
+    border-top: 1px solid #c9c9d8;
+}
+
+
+.paper-body{
+  padding-bottom: 200rpx;
+}

@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="page-head">
+    <view class="page-head-title">完成</view>
+    <view class="page-head-line"></view>
+    <view class="page-head-desc">没有错题</view>
+    <button type='default' bindtap='toHome'>追求卓越</button>
+  </view>
+</view>

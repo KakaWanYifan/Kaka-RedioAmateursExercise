@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kaka.ham.mapper.SequenceMapper">
+	<select id="getSequence" resultType="Sequence">
+		select * from sequence where
+		loginid = #{arg0} and category = #{arg1} and state = '1'
+	</select>
+
+	<select id="setSequenceInvalid">
+		<!-- update ham.sequence set state = '0' where loginid = #{arg0} and category 
+			= #{arg1} -->
+		update ham.sequence set state = '0' where loginid = #{arg0} and
+		category = #{arg2}
+	</select>
+	<insert id="setNewSequence">
+		insert into sequence
+		(loginid,step,category,created,state) values
+		(#{arg0},#{arg1},#{arg2},NOW(),'1')
+	</insert>
+	<select id="getSequenceListFive" resultType="Sequence">
+		SELECT
+		*
+		FROM
+		sequence
+		WHERE
+		DATE_SUB(CURDATE(), INTERVAL 4 DAY) &lt;= created
+		AND loginid =
+		#{arg0}
+	</select>
+</mapper> 

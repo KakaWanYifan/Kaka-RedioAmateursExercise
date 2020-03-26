@@ -1,0 +1,99 @@
+{
+  "pages": [
+    "page/tabBar/a/index",
+    "page/tabBar/b/index",
+    "page/tabBar/c/index",
+    "page/tabBar/m/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "卡卡无线电刷题",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#59AAFF",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "page/tabBar/a/index",
+        "iconPath": "img/a.png",
+        "selectedIconPath": "img/as.png",
+        "text": "A类"
+      },
+      {
+        "pagePath": "page/tabBar/b/index",
+        "iconPath": "img/b.png",
+        "selectedIconPath": "img/bs.png",
+        "text": "B类"
+      },
+      {
+        "pagePath": "page/tabBar/c/index",
+        "iconPath": "img/c.png",
+        "selectedIconPath": "img/cs.png",
+        "text": "C类"
+      },
+      {
+        "pagePath": "page/tabBar/m/index",
+        "iconPath": "img/m.png",
+        "selectedIconPath": "img/ms.png",
+        "text": "更多"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "page/a/",
+      "pages": [
+        "pages/sequence/sequence",
+        "pages/sequence/finish",
+        "pages/practice/practice",
+        "pages/practice/sheet",
+        "pages/practice/result",
+        "pages/mistake/mistake",
+        "pages/mistake/finish"
+      ]
+    },
+    {
+      "root": "page/b/",
+      "pages": [
+        "pages/sequence/sequence",
+        "pages/sequence/finish",
+        "pages/practice/practice",
+        "pages/practice/sheet",
+        "pages/practice/result",
+        "pages/mistake/mistake",
+        "pages/mistake/finish"
+      ]
+    },
+    {
+      "root": "page/c/",
+      "pages": [
+        "pages/sequence/sequence",
+        "pages/sequence/finish",
+        "pages/practice/practice",
+        "pages/practice/sheet",
+        "pages/practice/result",
+        "pages/mistake/mistake",
+        "pages/mistake/finish"
+      ]
+    },
+    {
+      "root": "page/m/",
+      "pages": [
+        "pages/sequence/sequence",
+        "pages/practice/practice",
+        "pages/mistake/mistake"
+      ]
+    }
+  ],
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="page-body paper-body">
+    <block wx:for="{{paper}}" wx:key="{{item}}">
+      <view class="page-section" style='margin:0rpx'>
+        <view class='topic'>{{item.id}}</view>
+        <view class='topic-sm'>{{item.q}}</view>
+        <view class='topic' wx:if="{{item.pic}}">
+          <image style='width:100%;' src="../../../../img/bank/{{item.pic}}" mode="widthFix" />
+        </view>
+      </view>
+      <view class="page-section">
+        <view class="weui-cells" style='margin:0rpx'>
+          <radio-group id="{{item.id}}" bindchange="radioChange">
+            <label class="weui-cell weui-check__label" wx:for="{{item.options}}" wx:key="{{item.k}}">
+              <view class="weui-cell__hd">
+                <radio value="{{item.k}}" />
+              </view>
+              <view class="topic-option-sm">{{item.v}}</view>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <view class="paper-footer" bindtap="navigate2Sheet">
+    
+      <view>答题卡</view>
+    
+  </view>
+</view>
