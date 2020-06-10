@@ -10,4 +10,4 @@
 **但是我现在没时间**
 **云开发改造完成之后，恢复服务。**
 
-![](./img/jpg.jpg)
+![](http://wanyifan.cn/github/Kaka-RedioAmateursExercise.jpg)
